@@ -1,5 +1,11 @@
 import React from "react";
 import L from "leaflet";
+import iconUrl from "../assets/images/icon-location.svg";
+
+const markerIcon = L.icon({
+  iconUrl,
+  iconSize: [46, 56],
+});
 
 const Map = ({ location }) => {
   const _map = React.useRef(null);
@@ -29,7 +35,9 @@ const Map = ({ location }) => {
 
     if (location) {
       _map.current.setView(location, 13);
-      _marker.current = L.marker(location).addTo(_map.current);
+      _marker.current = L.marker(location, { icon: markerIcon }).addTo(
+        _map.current
+      );
     }
   }, [location]);
 
