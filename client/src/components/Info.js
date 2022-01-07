@@ -11,26 +11,28 @@ const Info = ({
   },
 }) => {
   return (
-    <div className="info">
-      <div className="info-box">
-        <p>IP Address</p>
-        <p>{ip}</p>
-      </div>
-      <div className="info-box">
-        <p>Location</p>
-        <p>
-          {region ? `${region}, ` : ""}
-          {city ? `${city}` : ""}
-        </p>
-        <p>{postalCode}</p>
-      </div>
-      <div className="info-box">
-        <p>Timezone</p>
-        <p>UTC {timezone}</p>
-      </div>
-      <div className="info-box">
-        <p>ISP</p>
-        <p>{isp}</p>
+    <div className="infoContainer">
+      <div className="info">
+        <div className="info-box">
+          <p className="info-title">IP Address</p>
+          <p className="info-value">{ip}</p>
+        </div>
+        <div className="info-box">
+          <p className="info-title">Location</p>
+          <p className="info-value">
+            {region ? `${region}, ` : ""}
+            {city ? `${city} ` : ""}
+            {postalCode}
+          </p>
+        </div>
+        <div className="info-box">
+          <p className="info-title">Timezone</p>
+          <p className="info-value">{timezone ? `UTC ${timezone}` : ""}</p>
+        </div>
+        <div className="info-box">
+          <p className="info-title">ISP</p>
+          <p className="info-value">{isp}</p>
+        </div>
       </div>
     </div>
   );

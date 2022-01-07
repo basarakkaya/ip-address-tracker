@@ -6,7 +6,7 @@ const Map = ({ location }) => {
   const _marker = React.useRef(null);
 
   React.useEffect(() => {
-    let map = L.map("map").setView([0, 0], 13);
+    let map = L.map("map", { zoomControl: false }).setView([0, 0], 13);
 
     L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -33,7 +33,11 @@ const Map = ({ location }) => {
     }
   }, [location]);
 
-  return <div id="map" />;
+  return (
+    <div className="mapContainer">
+      <div id="map" />
+    </div>
+  );
 };
 
 export default Map;

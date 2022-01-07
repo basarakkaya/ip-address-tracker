@@ -8,7 +8,14 @@ import Map from "./components/Map";
 function App() {
   const [coordinates, setCoordinates] = React.useState(null);
   // const [inputVal, setInputVal] = React.useState("");
-  const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState({
+    ip: "",
+    region: "",
+    city: "",
+    postalCode: "",
+    timezone: "",
+    isp: "",
+  });
 
   const handleIPSearch = async (address, type) => {
     try {
@@ -26,11 +33,10 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h3>IP Address Tracker</h3>
-      </header>
+      <div className="header" />
+      <header className="title">IP Address Tracker</header>
       <Form onSubmit={handleIPSearch} />
-      {data && <Info data={data} />}
+      <Info data={data} />
       <Map location={coordinates} />
     </div>
   );

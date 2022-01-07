@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-escape */
 import React from "react";
+import { ReactComponent as ArrowIcon } from "../assets/images/icon-arrow.svg";
 
 const ipAddressRegex =
   /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
@@ -28,14 +29,14 @@ const Form = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={onSubmitHandler} ref={formRef}>
+    <form className="form" onSubmit={onSubmitHandler} ref={formRef}>
       <input
         name="address"
         placeholder="Search for any IP address or domain"
         disabled={loading}
       />
       <button type="submit" disabled={loading}>
-        Search
+        <ArrowIcon />
       </button>
     </form>
   );
