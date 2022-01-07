@@ -34,8 +34,8 @@ Screenshot from mobile version
 
 ### Links
 
-- Solution URL: [FrontendMentor Solution URL](https://your-solution-url.com)
-- Live Site URL: [Heroku URL](https://your-live-site-url.com)
+- Solution URL: [FrontendMentor Solution URL](https://www.frontendmentor.io/solutions/ip-address-track-using-react-and-expressjs-ws59rGcw-)
+- Live Site URL: [Heroku URL](https://ip-address-tracker-bakkaya.herokuapp.com/)
 
 ## My process
 
@@ -47,9 +47,9 @@ Screenshot from mobile version
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Express]() - Backend
+- [Express](https://expressjs.com) - Backend
 
 ## Author
 
 - Website - [Basar Akkaya](http://basarakkaya.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/basarakkaya)
+- Frontend Mentor - [@basarakkaya](https://www.frontendmentor.io/profile/basarakkaya)
