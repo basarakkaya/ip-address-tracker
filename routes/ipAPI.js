@@ -4,6 +4,10 @@ var router = express.Router();
 
 const baseURL = "https://geo.ipify.org/api/v2/country,city";
 
+// IMPORTANT NOTE: These API calls return sample responses in order not to
+// spend all IPIFY service credits while trying. Please enable the commented-out
+// parts and delete the sample codes to have real data from IPIFY API.
+
 router.get("/domain/:domain", async function (req, res, next) {
   console.log("DOMAIN", req.params.domain);
 
@@ -79,17 +83,17 @@ router.get("/ipAddress/:ipAddress", async function (req, res, next) {
   // }
 
   const sampleRes = {
-    ip: "8.8.8.8",
+    ip: "192.212.174.101",
     location: {
       country: "US",
-      region: "California",
-      city: "Mountain View",
+      region: "Brooklyn",
+      city: "NY",
       // lat: 37.40599,
       // lng: -122.078514,
       lat: Math.random() * 60,
       lng: Math.random() * 60,
-      postalCode: "94043",
-      timezone: "-07:00",
+      postalCode: "10001",
+      timezone: "-05:00",
       geonameId: 5375481,
     },
     domains: [

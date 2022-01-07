@@ -5,17 +5,18 @@ import Form from "./components/Form";
 import Info from "./components/Info";
 import Map from "./components/Map";
 
+const defaultData = {
+  ip: "192.212.174.101",
+  region: "Brooklyn",
+  city: "NY",
+  postalCode: "10001",
+  timezone: "-05:00",
+  isp: "SpaceX Starlink",
+};
+
 function App() {
   const [coordinates, setCoordinates] = React.useState(null);
-  // const [inputVal, setInputVal] = React.useState("");
-  const [data, setData] = React.useState({
-    ip: "",
-    region: "",
-    city: "",
-    postalCode: "",
-    timezone: "",
-    isp: "",
-  });
+  const [data, setData] = React.useState(defaultData);
 
   const handleIPSearch = async (address, type) => {
     try {
