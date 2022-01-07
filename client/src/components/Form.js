@@ -29,16 +29,18 @@ const Form = ({ onSubmit }) => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmitHandler} ref={formRef}>
-      <input
-        name="address"
-        placeholder="Search for any IP address or domain"
-        disabled={loading}
-      />
-      <button type="submit" disabled={loading}>
-        <ArrowIcon />
-      </button>
-    </form>
+    <div className="form-container">
+      <form className="form" onSubmit={onSubmitHandler} ref={formRef}>
+        <input
+          name="address"
+          placeholder="Search for any IP address or domain"
+          disabled={loading}
+        />
+        <button type="submit" disabled={loading}>
+          <ArrowIcon />
+        </button>
+      </form>
+    </div>
   );
 };
 
